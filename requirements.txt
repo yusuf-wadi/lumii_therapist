@@ -1,0 +1,19 @@
+# Core dependencies
+numpy>=1.21.0
+scipy>=1.7.0
+sounddevice>=0.4.5
+webrtcvad>=2.0.10
+
+# AI/ML Models
+faster-whisper>=0.10.0
+vaderSentiment>=3.3.2
+elevenlabs>=1.0.0
+
+# Optional performance optimizations
+numba>=0.58.0
+
+# Development dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
