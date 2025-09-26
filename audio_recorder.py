@@ -37,8 +37,11 @@ class StreamingAudioRecorder:
             # Process audio chunk
             audio_chunk = indata[:, 0].copy()  # Get mono channel
 
-            # VAD processing
-            vad_result = self.vad.process_frame(audio_chunk)
+            # Pass original sample rate on first call
+            if not hasattr(self.vad, 'orig_sr'):
+                vad_result = self.vad.process_frame(audio_chunk, orig_sr=SAMPLE_RATE)
+            else:
+                vad_result = self.vad.process_frame(audio_chunk)
 
             if vad_result == "STOP":
                 self.is_recording = False
