@@ -87,7 +87,7 @@ cd lumii_assistant
 # Copy all the Python files to this directory
 ```
 
-2. Create Env with Conda:
+2. Create Env with [Conda](https://www.anaconda.com/docs/getting-started/miniconda/install#command-prompt):
 ```bash
 conda env create -f environment.yml --force-reinstal
 ```
